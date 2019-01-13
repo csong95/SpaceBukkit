@@ -353,12 +353,12 @@ public class ServerActions implements ActionHandler {
             aliases = {"getLatestConsoleLogsWithLimit", "latestConsoleLogsWithLimit"})
     public TreeMap<Integer, String> getLatestConsoleLogsWithLimit(final int limit) {
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("server.log")));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("logs/latest.log")));
             int size = 0;
             int loop = 0;
             for (String line = bufferedReader.readLine(); line != null; line = bufferedReader.readLine())
                 size++;
-            bufferedReader = new BufferedReader(new FileReader(new File("server.log")));
+            bufferedReader = new BufferedReader(new FileReader(new File("logs/latest.log")));
             final Map<Integer, String> lines = new HashMap<Integer, String>();
             for (String line = bufferedReader.readLine(); line != null; line = bufferedReader.readLine()) {
                 if (size - limit < 1) {
@@ -494,7 +494,7 @@ public class ServerActions implements ActionHandler {
         serverInformations.put("Version", server.getVersion());
         serverInformations.put("ViewDistance", server.getViewDistance());
         serverInformations.put("HasWhitelist", server.hasWhitelist());
-        serverInformations.put("OnlinePlayers", server.getOnlinePlayers().length);
+        serverInformations.put("OnlinePlayers", server.getOnlinePlayers().size());
         return serverInformations;
     }
 
