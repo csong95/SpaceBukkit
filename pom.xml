@@ -1,22 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- @csong95 Sign out
-1
-0 25 KillerGoldFisch/SpaceBukkit
-forked from XereoNet/SpaceBukkit
- Code  Pull requests 0  Projects 0  Insights
-SpaceBukkit/pom.xml
-0aec660  on Feb 20, 2017
-@KevinGliewe KevinGliewe Update to Bukkit 1.11.2
-@drdanick @NeatMonster @tips48 @LimeByte @KevinGliewe @Slamper @Antariano
-      
-202 lines (183 sloc)  7.2 KB
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
